@@ -1,6 +1,12 @@
+from fastapi import FastAPI
 
-print("hello")
+
+app = FastAPI()
 
 
-print("hello1")
+@app.get("/say_hello")
+def say_hello():
+    return {"message":"Hey"}
+
+
 
